@@ -40,7 +40,7 @@ sleeptime_normal = [7, 10, 12, 15, 60]
 sleeptime_fast = [5, 8, 10, 12, 52]
 
 # 10s to start
-time.sleep(10)
+time.sleep(5)
 
 for i in range(0,40):
     print(f'{i} starts at {time.ctime()}')
