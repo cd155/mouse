@@ -26,8 +26,8 @@ sleeptime = [7, 10, 12, 15, 60]
 time.sleep(10)
 
 '''
-    total 137s for one round
-    one hour is about 26 round
+    total 179s for one round
+    one hour is about 20 round
 '''
 for _ in range(0,26):
     for step in steps:
