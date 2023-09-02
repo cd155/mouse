@@ -18,18 +18,32 @@ steps = [(356,  291,    1),     # home              9   - 5 (time, wait time)
          (540,  500,    2)      # refill 2          12  - 5
         ]
 
+'''
 
+    # 0: 4
+    # 1: 4
+    # 2: 3
+    # 3: 1
+    # 4: 1
+    
+    1. sleeptime_normal: 
+        total 179s for one round
+        two hours are about 40 round
+
+    2. sleeptime_fast:
+        total 146s for one round
+        two hours are about 49 round
+'''
 # 7, 10, 12, 15, 60
-sleeptime = [7, 10, 12, 15, 60]
+sleeptime_normal = [7, 10, 12, 15, 60]
+
+sleeptime_fast = [5, 8, 10, 12, 52]
 
 # 10s to start
 time.sleep(10)
 
-'''
-    total 179s for one round
-    one hour is about 20 round
-'''
-for _ in range(0,26):
+for i in range(0,40):
+    print(f'{i} starts at {time.time()}')
     for step in steps:
         process1 = subprocess.Popen(["xdotool", "mousemove", str(step[0]), str(step[1])])
         process1.wait()
@@ -37,6 +51,5 @@ for _ in range(0,26):
         process2 = subprocess.Popen(["xdotool", "click", "1"])
         process2.wait()
         
-        print(time.time())
-        time.sleep(sleeptime[step[2]])
+        time.sleep(sleeptime_fast[step[2]])
 
