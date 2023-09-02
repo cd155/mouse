@@ -1,4 +1,4 @@
-# kancolle 5-2 script
+# kc 5-2 script
 
 import subprocess
 import time
