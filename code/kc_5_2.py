@@ -43,7 +43,7 @@ sleeptime_fast = [5, 8, 10, 12, 52]
 time.sleep(10)
 
 for i in range(0,40):
-    print(f'{i} starts at {time.time()}')
+    print(f'{i} starts at {time.ctime()}')
     for step in steps:
         process1 = subprocess.Popen(["xdotool", "mousemove", str(step[0]), str(step[1])])
         process1.wait()
