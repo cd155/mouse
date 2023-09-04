@@ -2,6 +2,7 @@
 
 import subprocess
 import time
+import random
 
 steps = [(356,  291,    1),     # home              9   - 5 (time, wait time)
          (748,  878,    0),     # go 1              7   - 5
@@ -43,6 +44,7 @@ sleeptime_fast = [5, 8, 10, 12, 52]
 time.sleep(10)
 
 for i in range(0,50):
+    rand = (random.randrange(0, 10))/100
     print(f'{i} starts at {time.ctime()}')
     for step in steps:
         process1 = subprocess.Popen(["xdotool", "mousemove", str(step[0]), str(step[1])])
@@ -51,5 +53,5 @@ for i in range(0,50):
         process2 = subprocess.Popen(["xdotool", "click", "1"])
         process2.wait()
         
-        time.sleep(sleeptime_fast[step[2]])
+        time.sleep(sleeptime_fast[step[2]]*rand)
 
