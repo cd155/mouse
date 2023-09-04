@@ -45,7 +45,7 @@ time.sleep(10)
 
 for i in range(0,50):
     rand = 1 + (random.randrange(0, 10))/100
-    print(f'{i} starts at {time.ctime()}')
+    print(f'{i} starts at {time.ctime()}, random = {rand}.')
     for step in steps:
         process1 = subprocess.Popen(["xdotool", "mousemove", str(step[0]), str(step[1])])
         process1.wait()
