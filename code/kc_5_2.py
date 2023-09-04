@@ -20,7 +20,7 @@ steps = [(356,  291,    1),     # home              9   - 5 (time, wait time)
         ]
 
 '''
-
+    total num of time period
     # 0: 4
     # 1: 4
     # 2: 3
